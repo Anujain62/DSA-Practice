@@ -1,22 +1,19 @@
 import java.util.Scanner;
-
 public class Count_And_Say_Problem {
  public static void main(String[] args) {
-  
-  Scanner sc= new Scanner(System.in);
 
+  Scanner sc= new Scanner(System.in);
   System.out.println("Enter a number :");
   int n=sc.nextInt();
-
   sc.close();
 
   String str= "1";
-
   int count;
-  while (n>0) {
 
-   String tempStr = "";
-   for(int i=0;i<str.length();i+=count){
+  while (n>0) {
+    String tempStr = "";
+
+    for(int i=0;i<str.length();i+=count){
     char ch= str.charAt(i);
     count =1;
     for(int j=i+1;j<str.length();j++){
@@ -59,12 +56,10 @@ public class Count_And_Say_Problem {
 
     tempStr+=ch;
    }
+   
    str = tempStr;
    n--;
   }
-
   System.out.println("Problem : "+str);
-
-
  }
 }
