@@ -9,6 +9,7 @@ public class Find_All_Pairs_With_Given_Sum {
   int size = sc.nextInt();
 
   int[] arr = new int[size];
+  
   System.out.println("Enter elements of array:");
   for(int i=0;i<size;i++){
    arr[i]=sc.nextInt();

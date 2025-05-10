@@ -32,14 +32,13 @@ public class Max_Product_SubArray {
     }
    }
   }
-  
+
   for(int i=start;i<end;i++){
    maxSubArr[idx]=arr[i];
    idx++;
   }
 
-  System.out.println("Maximum product = "+max);
-
+  System.out.println("max = "+max);
   System.out.print("Max Product Sub-Array:\n[ ");
   for(int i=0;i<idx;i++)
    System.out.print(maxSubArr[i]+" ");

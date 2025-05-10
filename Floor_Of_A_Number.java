@@ -32,8 +32,6 @@ public class Floor_Of_A_Number {
   if(i==size-1 && (arr[i]+1)==target){
    System.out.println("Target is not present but it's floor number is "+arr[i]); 
   }
-  // if(i==size-1)
-  //  System.out.println("Target and it's floor both are noot present!");
   
  }
 }

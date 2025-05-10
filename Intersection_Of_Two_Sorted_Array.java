@@ -27,7 +27,6 @@ public class Intersection_Of_Two_Sorted_Array {
 
   int[] arr3 = new int[size3];
   int idx=0;
-
   int i=0;
   while (i<size1) {
    for(int j=0;j<size2;j++){
@@ -44,7 +43,5 @@ public class Intersection_Of_Two_Sorted_Array {
   for(i=0;i<idx;i++)
    System.out.print(arr3[i]+" ");
   System.out.print("]"); 
-
-
  }
 }

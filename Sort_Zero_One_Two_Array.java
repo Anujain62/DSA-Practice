@@ -51,11 +51,8 @@ public class Sort_Zero_One_Two_Array {
    arr.add(2);
    two--;
   }
-
   str=arr.toString();
   System.out.println("After sorting the array:");
   System.out.println(str);
-
-
  }
 }

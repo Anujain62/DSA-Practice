@@ -1,7 +1,5 @@
 import java.util.Scanner;
-
 public class Buy_sell_stock {
-
     static int stock(int arr[],int n){
             int profit=0,x;
             for(int i=0;i<n;i++){
@@ -16,23 +14,16 @@ public class Buy_sell_stock {
             return profit;
         }
 
-    public static void main(String[] args) {
-        
+    public static void main(String[] args) { 
         Scanner sc=new Scanner(System.in);
-
         System.out.println("Enter size of stocks:");
         int size = sc.nextInt();
-
         int[] arr = new int[size];
         System.out.println("Enter stocks :");
         for(int i=0;i<size;i++)
          arr[i]=sc.nextInt();
-
-        sc.close();
-        
-        System.out.println("Profit = "+stock(arr, size));
-        
-         
+        sc.close(); 
+        System.out.println("Profit = "+stock(arr, size));        
     }
 }
 

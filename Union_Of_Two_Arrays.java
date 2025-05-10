@@ -13,11 +13,11 @@ public class Union_Of_Two_Arrays {
   for(int i=0;i<size1;i++)
     arr1[i]=sc.nextInt();
   
-  System.out.println("Enter size of first array:");
+  System.out.println("Enter size of second array:");
   int size2= sc.nextInt();
   
   int[] arr2= new int[size2];
-  System.out.println("Enter elements of first array:");
+  System.out.println("Enter elements of second array:");
    for(int i=0;i<size1;i++)
     arr2[i]=sc.nextInt();  
  
@@ -50,8 +50,8 @@ public class Union_Of_Two_Arrays {
   }
 
   System.out.println("Union of two array ");
-  for(int i=0;i<idx;i++)
-    System.out.println(arr3[i]);
+  for(int i=0;i<idx-1;i++)
+    System.out.print(arr3[i]+" ");
 
  }
 }

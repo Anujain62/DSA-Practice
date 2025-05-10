@@ -2,13 +2,14 @@ import java.util.Scanner;
 
 public class Cyclic_Rotation_By_Kth_Position {
  public static void main(String[] args) {
-  
+
   Scanner sc=new Scanner(System.in);
 
   System.out.println("Enter size of array:");
   int size = sc.nextInt();
 
   int[] arr = new int[size];
+
   System.out.println("Enter elements of array:");
   for(int i=0;i<size;i++){
    arr[i]=sc.nextInt();
@@ -20,10 +21,11 @@ public class Cyclic_Rotation_By_Kth_Position {
   int x=position;
 
   sc.close();
-  
+
   System.out.println("Original array:");
-  for(int e: arr)
-   System.out.print(e+" ");
+  for(int e: arr){
+    System.out.print(e+" ");
+  }
 
   while (position>0) {
    int temp=arr[size-1];
@@ -37,8 +39,6 @@ public class Cyclic_Rotation_By_Kth_Position {
   System.out.println("\nAfter "+x+"th rotation Araay :");
   for(int e: arr)
    System.out.print(e+" ");
-  
-
 
  }
 }

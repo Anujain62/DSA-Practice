@@ -1,31 +1,23 @@
 import java.util.Scanner;
-
 public class Flip_And_Invert_Image {
  public static void main(String[] args) {
-  
   Scanner sc = new Scanner(System.in);
-
   System.out.println("Enter number of rows:");
   int row = sc.nextInt();
-
   System.out.println("Enter number of columns:");
   int column = sc.nextInt();
-
   int[][] arr = new int[row][column];
   System.out.println("Enter elements of 2D-Array:");
   for(int i=0;i<row;i++)
    for(int j=0;j<column;j++)
     arr[i][j]=sc.nextInt();
-  
   sc.close();
-
   System.out.println("Original array :");
    for(int i=0;i<row;i++){
     for(int j=0;j<column;j++)
      System.out.print(arr[i][j]+" ");
     System.out.println();  
    }
-  
   for(int i=0;i<row;i++){
    int left = 0;
    int right = column-1;
@@ -37,7 +29,6 @@ public class Flip_And_Invert_Image {
     right--;
    }
   }
-
   for(int i=0;i<row;i++){
    for(int j=0;j<column;j++){
     if(arr[i][j]==0)
@@ -46,15 +37,11 @@ public class Flip_And_Invert_Image {
      arr[i][j]=0;
    }
   }
-
   System.out.println("New array :");
   for(int i=0;i<row;i++){
     for(int j=0;j<column;j++)
      System.out.print(arr[i][j]+" ");
     System.out.println();  
    }
-  
-
-  
  }
 }

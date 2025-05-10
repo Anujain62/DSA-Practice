@@ -24,9 +24,6 @@ public class Count_Number_Of_Occurrences_In_Array {
    if(arr[i]==target)
      count++;
   }
-
   System.out.println("Number of occurrences of target element "+target+" is "+count);
-
-
  }
 }
