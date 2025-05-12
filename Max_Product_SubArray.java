@@ -15,33 +15,29 @@ public class Max_Product_SubArray {
 
   sc.close(); 
 
-  int[] maxSubArr = new int[size];
-  int idx = 0;
   int start=0;
   int end=0; 
 
-  int max = arr[0];
+  int max=0;
   for(int i=0;i<size;i++){
+   int temp=arr[i];
    int mult=1;
-   for(int j=i+1;j<size;j++){
+   for(int j=i;j<size;j++){
     mult*=arr[j];
-    if(mult>max){
-     start = i+1;
-     end = j+1;
-     max=mult;
+    if(mult>=temp && mult>max){
+     start=i;
+     end=j;
+     temp=mult;
     }
    }
+   if(max<temp)
+    max=temp;
   }
 
-  for(int i=start;i<end;i++){
-   maxSubArr[idx]=arr[i];
-   idx++;
-  }
-
-  System.out.println("max = "+max);
+  System.out.println("Maximum product = "+max);
   System.out.print("Max Product Sub-Array:\n[ ");
-  for(int i=0;i<idx;i++)
-   System.out.print(maxSubArr[i]+" ");
+  for(int i=start;i<=end;i++)
+   System.out.print(arr[i]+" ");
   System.out.print("]"); 
   
  }

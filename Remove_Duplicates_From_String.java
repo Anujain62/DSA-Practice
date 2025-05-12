@@ -17,7 +17,8 @@ public class Remove_Duplicates_From_String {
     newStr+=ch;
   }
 
-  System.out.println("New string after removing duplicates : "+newStr);
+  System.out.print("New string after removing duplicates: ");
+  System.out.println(newStr);
   
  }
 }
