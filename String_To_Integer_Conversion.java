@@ -9,7 +9,13 @@ public class String_To_Integer_Conversion {
   String str = sc.next();
   sc.close();
 
-  int i = Integer.valueOf(str);
-  System.out.println("Value of int :" +i);
+  int[] intArr = new int[str.length()];
+  for(int i=0;i<str.length();i++){
+   intArr[i] = (int)str.charAt(i);
+  }
+
+  System.out.println("String to int :");
+  for(int ele:intArr)
+   System.out.print(ele+" ");
  }
 }

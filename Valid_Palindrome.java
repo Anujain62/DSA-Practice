@@ -17,7 +17,7 @@ public class Valid_Palindrome {
   int right = str.length()-1;
   int count = 1;
 
-  while (left<=right && count>0) {    
+  while (left<right && count>0) {    
    char leftChar = str.charAt(left);
    char rightChar = str.charAt(right);
 
@@ -26,24 +26,18 @@ public class Valid_Palindrome {
     right--;
    }
    else{
-    if(str.charAt(left+1)==str.charAt(right-1)){
      str.deleteCharAt(right);
      count--;
-    }
-    else{
-     str.deleteCharAt(left);
-     count--;
+     right--;
     }
    }
-
-  }
 
   StringBuilder tempStr = new StringBuilder(str.reverse());
 
   if(tempStr.equals(str))
-   System.out.println("String is Palindrome");
+   System.out.println("Valid Palindrome");
   else
-   System.out.println("String is not Palindrome"); 
+   System.out.println("Invalid Palindrome"); 
   
  }
 }
