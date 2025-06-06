@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Find_How_Many_Even_Digit_Num_In_Array {
+
  public static int[] totalCount(int[] array){
   int total = 0;
   int[] tempArr = new int[array.length];
@@ -22,7 +23,7 @@ public class Find_How_Many_Even_Digit_Num_In_Array {
   return tempArr;
  }
  public static void main(String[] args) {
-  
+
   Scanner sc = new Scanner(System.in);
   System.out.println("Enter size of array:");
   int size = sc.nextInt();
@@ -32,6 +33,7 @@ public class Find_How_Many_Even_Digit_Num_In_Array {
    arr[i] = sc.nextInt();
 
   sc.close();
+  
   int[] tempArr = totalCount(arr); 
   System.out.println("Index of even digit numbers:");
   int count = 1;
