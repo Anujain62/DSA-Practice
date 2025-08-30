@@ -18,7 +18,7 @@ public class Print_Path_Only_Using_Right_Down {
   System.out.println("Enter number of column:");
   column = sc.nextInt();
   sc.close();
-  System.out.println("Paths:");
+  System.out.println("Paths : ");
   printPathsRD("", 0, 0);
  }
 }

@@ -1,42 +1,43 @@
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Two_String_Are_Anagrams_Or_Not {
  public static void main(String[] args) {
   
   Scanner sc=new Scanner(System.in);
+  System.out.println("Enter first string:");
+  String str1 = sc.next();
+  System.out.println("Enter second string:");
+  String str2 = sc.next();
+  sc.close();
 
-  // System.out.println("Enter first string:");
-  // String str1 = sc.next();
-
-  // System.out.println("Enter second string:");
-  // String str2 = sc.next();
-
-  String str1 = "geeks";
-  String str2 = "ksept";
-
-  String tempStr = "";
-
-  int i;
-  for(i=0;i<str1.length();i++){
-    char ch = str1.charAt(i);
-   int count=1;
-   int tempCount = 0;
-    for(int j=i+1;j<str1.length();j++){
-    if(ch==str1.charAt(j))
-     count++;
-   }
-   for(int j=0;j<str2.length();j++){
-    if(ch==str2.charAt(j))
-     tempCount++;
-   }
-   if(tempCount==count && !tempStr.equals(ch))
-    tempStr = tempStr + ch;
-   System.out.println(i);
+  if(isAnagram(str1,str2)){
+    System.out.println("Both are anagrams!");
   }
-
-  if(str1.length()==str2.length())
-   System.out.println("Both Strings Are Anagrams!");
-  else
-   System.out.println("Both Strings Are Not Anagrams!"); 
+  else{
+    System.out.println("Both are not anagrams!");
+  }
  }
+
+ public static boolean isAnagram(String str1,String str2){
+
+  if(str1.length()!=str2.length())
+    return false;
+
+   Map<Character,Integer> frequency = new HashMap<>();
+
+    for(char c:str1.toLowerCase().toCharArray()){
+       frequency.put(c, frequency.getOrDefault(c,0)+1);
+    }
+
+    for(char c:str2.toLowerCase().toCharArray()){
+      if(!frequency.containsKey(c) || frequency.get(c)==0)
+       return false;
+      frequency.put(c,frequency .get(c)-1); 
+    }
+  return true;
+
+ }
+
 }

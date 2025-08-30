@@ -16,8 +16,10 @@ public class Find_Smallest_Letter_Greater_Than_Target_Using_Binary_Search {
    }
   }
   return idx;
+
  }
  public static void main(String[] args) {
+
   Scanner sc = new Scanner(System.in);
   System.out.println("Enter size of the array :");
   int size = sc.nextInt();
@@ -33,5 +35,6 @@ public class Find_Smallest_Letter_Greater_Than_Target_Using_Binary_Search {
     System.out.println("Small Letter Greater than target : "+arr[0 ]);
   else
     System.out.println("Small Letter Greater than target :"+arr[smallLetr]);
+
  }
 }

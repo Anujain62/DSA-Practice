@@ -34,6 +34,7 @@ public class Maze_Path_Including_All_Directions {
    for(int j=0;j<column;j++)
     maze[i][j] = true;
   }
+  System.out.println("All Paths :");
   allPaths("", maze, 0, 0);
  }
 }

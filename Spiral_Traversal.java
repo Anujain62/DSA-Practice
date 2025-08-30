@@ -35,7 +35,7 @@ public class Spiral_Traversal {
      System.out.print(mat[bottom][i]+" ");
     bottom--; 
    }
-   // for left row
+   // for left column
    if(left<=right){
     for(int i=bottom;i>=top;--i)
      System.out.print(mat[i][left]+" ");
